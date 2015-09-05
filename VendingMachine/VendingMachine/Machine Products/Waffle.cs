@@ -8,7 +8,7 @@ namespace VendingMachine
 {
    public class Waffle : Product
    {
-        public Waffle(string title, uint price)
+        public Waffle(string title, int price)
             : base(title, price)
         {
             Type = "Вафля";

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Balance.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="CurrentTransaction.cs" />
     <Compile Include="Machine Products\Cake.cs" />
     <Compile Include="Machine Products\Cookie.cs" />
     <Compile Include="Machine.cs" />
