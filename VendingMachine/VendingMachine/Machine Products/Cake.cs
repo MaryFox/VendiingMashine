@@ -8,8 +8,10 @@ namespace VendingMachine
 {
    public class Cake: Product
     {
-        public Cake(string title, double price)
+        public Cake(string title, uint price)
             : base(title, price)
-        { }
+        {
+            Type = "Кекс";
+        }
     }
 }

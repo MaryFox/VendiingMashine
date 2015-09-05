@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cake.cs" />
-    <Compile Include="Cookie.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Balance.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Machine Products\Cake.cs" />
+    <Compile Include="Machine Products\Cookie.cs" />
+    <Compile Include="Machine.cs" />
+    <Compile Include="Machine Products\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Waffle.cs" />
+    <Compile Include="Machine Products\Waffle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

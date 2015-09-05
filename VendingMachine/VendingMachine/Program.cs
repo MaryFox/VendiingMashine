@@ -10,7 +10,9 @@ namespace VendingMachine
     {
         static void Main(string[] args)
         {
-
+            Machine M = new Machine(new List<Product> { new Cookie("Маша", 1), new Cookie("Маша", 1), new Waffle("Вафля", 5) });
+            M.ShowMenu();
+            Console.ReadLine();
         }
     }
 }

@@ -8,10 +8,11 @@ namespace VendingMachine
 {
     public class Product
     {
-        public double Price { get; private set; }
+        public uint Price { get; private set; }
         public string Title { get; private set; }
+        public string Type { get; set; }
 
-        public Product(string title, double price)
+        public Product(string title, uint price)
         {
             Price = price;
             Title = title;

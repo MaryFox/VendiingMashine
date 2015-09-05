@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace VendingMachine
 {
-   public class Waffle : Product
-    {
-        public Waffle(string title, double price)
+   public class Cookie : Product
+   {
+
+        public Cookie(string title, uint price)
             : base(title, price)
-        { }
+        {
+            Type = "Печенье";
+        }
     }
 }
