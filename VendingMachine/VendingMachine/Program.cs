@@ -10,8 +10,15 @@ namespace VendingMachine
     {
         static void Main(string[] args)
         {
-            Machine M = new Machine(new List<Product> { new Cookie("Маша", 1), new Cookie("Маша", 1), new Waffle("Вафля", 5) });
-            M.ShowMenu();
+            Machine m = new Machine();
+            //m.MachineMoney.ShowBalance(); узнать баланс автомата
+            Client c = new Client();
+            //c.Wallet.ShowBalance(); узнать баланс покупателя
+            Console.WriteLine("Выбирите желаемый пункт меню");
+            m.ShowMenu();
+
+
+
             Console.ReadLine();
         }
     }

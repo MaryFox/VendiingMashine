@@ -11,6 +11,7 @@ namespace VendingMachine
         public uint Price { get; private set; }
         public string Title { get; private set; }
         public string Type { get; set; }
+        public int NumberInMachine { get; set; }
 
         public Product(string title, uint price)
         {

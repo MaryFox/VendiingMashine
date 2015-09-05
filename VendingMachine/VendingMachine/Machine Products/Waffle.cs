@@ -12,6 +12,7 @@ namespace VendingMachine
             : base(title, price)
         {
             Type = "Вафля";
+            NumberInMachine = 2;
         }
     }
 }
