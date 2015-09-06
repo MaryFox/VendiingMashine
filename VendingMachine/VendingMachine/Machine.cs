@@ -6,17 +6,14 @@ namespace VendingMachine
 {
     public class Machine
     {
-        IEnumerable<Product> Products { get; set; }
+        public List<Product> Products { get; set; }
         public Balance Money { get; set; }
         public Machine()
         {
-            Products = new List<Product> { new Cookie("Юбилейное", 10), new Cookie("Юбилейное", 10),  new Cookie("Юбилейное", 1),
-                new Waffle("Венская", 30), new Waffle("Венская", 30), new Waffle("Венская", 30), new Waffle("Венская", 30),
-                new Waffle("Венская", 30), new Waffle("Венская", 30), new Waffle("Венская", 30), new Waffle("Венская", 30),
-                new Waffle("Венская", 30), new Waffle("Венская", 30), new Cake("Домашний", 50), new Cake("Домашний", 50),
-                new Cake("Домашний", 50), new Cake("Домашний", 50)};
-            Random m = new Random();
-            Money = new Balance(m.Next(1, 100));
+            Products = new List<Product>();
+            Random m = new Random();//создание экземпляра класса Рандом для создания произвольного кол-ва монет разного номинала
+            Money = new Balance(m.Next(1, 1000));
+            //Money = new Balance(0); //для тестирования случая, когда автомат не может выдать деньги
         }
         /// <summary>
         /// Вывод меню автомата
@@ -58,6 +55,21 @@ namespace VendingMachine
                 return false;
                 //такую монету автомат не принимает
             }
+        }
+        /// <summary>
+        /// Удаление купленного товара из автомата
+        /// </summary>
+        /// <param name="product">товар</param>
+        public void DeletiongBoughtProduct(Product product)
+        {
+            Products.RemoveAt(Products.FindLastIndex(x=> x==product));
+        }
+        public bool CheckForExchange(int exchange)
+        {
+            
+                if (Money.CountAllMoney()>= exchange)
+                    return true;   
+            return false;
         }
         
     }
