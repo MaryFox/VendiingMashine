@@ -66,7 +66,6 @@ namespace VendingMachine
         }
         public bool CheckForExchange(int exchange)
         {
-            
                 if (Money.CountAllMoney()>= exchange)
                     return true;   
             return false;
