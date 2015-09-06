@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VendingMachine
 {
@@ -20,7 +18,9 @@ namespace VendingMachine
             Random m = new Random();
             Money = new Balance(m.Next(1, 100));
         }
-
+        /// <summary>
+        /// Вывод меню автомата
+        /// </summary>
         public void ShowMenu()
         {
             Console.WriteLine();
@@ -34,11 +34,18 @@ namespace VendingMachine
             }
             Console.WriteLine();
         }
-
+        /// <summary>
+        /// Поиск товара по номеру
+        /// </summary>
+        /// <param name="num">номер товара</param>
         public Product FindByNumber(int num)
         {
             return Products.FirstOrDefault(x => x.NumberInMachine == num);
         }
+        /// <summary>
+        /// Проверка, принимает ли автомат монету такого номинала
+        /// </summary>
+        /// <param name="coin">номинал монеты</param>
         public bool CheckTheCoin(int coin)
         {
             if (coin==1 || coin == 2 || coin == 5 || coin == 10)
